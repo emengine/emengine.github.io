@@ -45,7 +45,7 @@
 
 
 
-<div class="container-fluid">
+<div class="container lead">
 
     <div class="row">
 
@@ -69,7 +69,7 @@
     <div class="panel panel-default">
         <div class="panel-body">
 
-<h2>Introduction</h2>
+<h2 class="bg-heading2">Introduction</h2>
 
 <p>
 Electro-magnetic converter of the electric power into thrust force (referred to here as EMC) provides a means to directly convert electrical power into thrust force, without use of any mediators, such as heated or ionized gasses, conductive rails, etc.
@@ -79,7 +79,7 @@ The operation of EMC is based on present theories of electromagnetism.
 </p>
 
 
-<h2>Principle of work</h2>
+<h2 class="bg-heading2">Principle of work</h2>
 
 <p>
 In a system comprising of two conductive wire coils `A` and `B`, each carrying electric current of constant value `i_1` and `i_2`, there will be magnetic forces on both coils as a result of interaction between currents in each coil and magnetic field produced by those currents. In this static case, force on coil `A` (`vec F_ba`) will be equal, but opposite, to the force on coil `B` (`vec F_ab`).
@@ -102,7 +102,7 @@ any change in a magnetic field in vacuum propagates at the speed of light
 Based on these two assumptions, it is possible to achieve a stationary state where currents `i_1` and `i_2` are changing in a way that produces consistent difference between forces `vec F_ba` and `vec F_ab`, a resultant force, where that resultant force has constant value, not equal to zero, and direction. This generates a constant thrust on the system made of wire coils `A` and `B` as a result of a tendency of the system to move relative to generated magnetic field.
 </p>
 
-<h2>Qualitative description of work</h2>
+<h2 class="bg-heading2">Qualitative description of work</h2>
 
 <p>
 This section describes EMC operation in qualitative terms, using exaggerated values in order to better illustrate details of the work.
@@ -158,7 +158,7 @@ and since `vec F_12` and `vec F_21` are co-linear we can simply use:
 </div>
 
 
-<h3>Simple case of non-constant currents</h3>
+<h3 class="bg-heading3">Simple case of non-constant currents</h3>
 <p>
 If we start chaging current `i_1` and/or `i_2` strength, forces `F_12` and `F_21` will change over time. We will annotate previous formulas to account for this fact like so:
 </p>
@@ -215,7 +215,7 @@ Here it turns out that the resultant force is not equal to zero, since current `
 If current `i_2` rises net force will be positive, which in this setup means it will be directed along `x` axis, left-to-right.
 </p>
 
-<h3>Constant net force for the simple case of non-constant currents</h3>
+<h3 class="bg-heading3">Constant net force for the simple case of non-constant currents</h3>
 <p>
 Goal here is to have EMC produce a net force, if not constant, then at least directed in the same direction during operation.
 </p>
@@ -238,7 +238,7 @@ Forces `F_12` and `F_21` are changing directions as currents change from positiv
 </p>
 
 
-<h2>Getting quantitative estimate of the net force</h2>
+<h2 class="bg-heading2">Getting quantitative estimate of the net force</h2>
 <p>
 It is fairly obvious that Figure 05 resembles two sine waves shifted by 90 degrees. For that reason, we will assume that currents `i_1` and `i_2` change as a sine wave functions:
 </p>
@@ -261,9 +261,9 @@ In order to come up with quantitative estimate of the net force, we will again w
 [Fig. 06]
 
 
-<h3>Calculus</h3>
+<h3 class="bg-heading3">Calculus</h3>
 
-<h4>Calculus setup</h4>
+<h4 class="bg-heading4">Calculus setup</h4>
 <p>
 We will use formula of calculatin magnetic force on a wire coil via magnetic flux:
 </p>
@@ -387,7 +387,7 @@ Taking all this into account, magnetic flux for coils becomes:
 `Phi_21 = M(x-x_0) * i_2 * sin ( omega t + k * ( x - x_0 ) )`
 </div>
 
-<h4>Putting it all together</h4>
+<h4 class="bg-heading4">Putting it all together</h4>
 
 <p>
 Since we will need derivative of `M(x)` in order to get final formula for net force, let's take a look at how `M(x)` function looks like in general case:
@@ -455,7 +455,7 @@ these two become:
 `d/dx Phi_21 = i_2 * ( - d/dx M(x_0) * sin ( omega t + k * ( - x_0 ) ) + M(x_0) * k * cos ( omega t + k * ( - x_0 ) ) )`
 </div>
 
-<h4>The net force</h4>
+<h4 class="bg-heading4">The net force</h4>
 <p>
 Magnetic force on a coil is:
 </p>
@@ -519,7 +519,7 @@ for the case when distance between the two coils is much smaller than the wavele
 Having in mind that for positive `x_0` (it can't be negative, it is a physical distance between the two coils), `d/dx M(x_0) * x_0` is negative and `M(x_0)` is positive, we can see that for some specific geometry of coils (diameter and distance) `d/dx M(x_0) * x_0 + M(x_0)` can be maximized or even made to be equal to `0`.
 </p>
 
-<h4>Estimating net force</h4>
+<h4 class="bg-heading4">Estimating net force</h4>
 
 <p>
 To estimate the net force, we will assume:
@@ -549,7 +549,7 @@ We can say that, in general, the net force is about million times smaller than t
 Using finite element analysis we can calculate net force on arbitraty coil geometries and, in general case, above estimate turns out to be correct.
 </p>
 
-<h2>Conclusion(s)</h2>
+<h2 class="bg-heading2">Conclusion(s)</h2>
 <p>
 Since the net force produced by EMC is practically negligible, pondering further on EMC characteristics would be a not practical thing to do. However, since it provides loads of fun for the nerds and other similar Earthly creatures, we'll do it anyways.
 </p>
