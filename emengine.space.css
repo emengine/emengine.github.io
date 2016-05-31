@@ -13,11 +13,18 @@ body
 
 /* Sticky footer styles
 -------------------------------------------------- */
-.footer {
+.footer
+{
   position: absolute;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
   background-color: #f5f5f5;
+}
+
+/* remove gradient from well */
+.well
+{
+    background-image: none;
 }
