@@ -180,7 +180,8 @@ where `K` is coefficient which depends on the geometry of the system and is cons
 In the simple system we have set up, these two forces will be colinear with the `x` axis.
 </p>
 
-[Fig. 03]
+<img class="img-responsive center-block" src="figures/fig03.png" alt="Figure 03."> 
+<p class="text-center">Figure 03.</p>
 
 <p>
 Resultant force on the entire system is:
@@ -214,7 +215,8 @@ If we start chaging current `i_1` and/or `i_2` strength, forces `F_12` and `F_21
 In order to illustrate principle of EMC operation, we will observe a simple case where current `i_1` is constant and current `i_2` increasing in linear fashion.
 </p>
 
-[Fig. 04]
+<img class="img-responsive center-block" src="figures/fig04.png" alt="Figure 04."> 
+<p class="text-center">Figure 04.</p>
 
 <p>
 In the moment `t_1`, we would have:
@@ -225,17 +227,19 @@ In the moment `t_1`, we would have:
 <br/>
 `F_21(t_1) = K * i_1(t_1) * i_2(t_1)`
 <br/>
-`F_r(t_1) = F_12(t_1) + F_21(t_1) = K * i_2(t_1) * i_1(t_1) - K * i_1(t_1) * i_2(t_1) = 0`
+<br/>
+`F_r(t_1) = F_12(t_1) + F_21(t_1)`
+<br/>&nbsp;&nbsp;&nbsp;`= K * i_2(t_1) * i_1(t_1) - K * i_1(t_1) * i_2(t_1) = 0`
 </div>
 
 <p>
-Here we come to the key points for EMC operation. First point is: forces `F_21` and `F_12` are a result of interaction between electric current and a magnetic field, and not a result of interaction with another electric current. And the second: changes in magnetic field in vacuum propagate at the speed of light.
+Here we come to the key points for EMC operation. First point is: forces `F_21` and `F_12` are a result of interaction between electric current and magnetic field, and not a result of interaction with another electric current. And the second one: changes in magnetic field in vacuum propagate at the speed of light.
 </p>
 <p>
-This effectively means that, as electric current `i_2` steadily rises, force `F_12` on coil `B` will be proportional to value of the `i_2` in moment `t_1` and the value of `i_1`.
+This effectively means that, as electric current `i_2` steadily rises, force `F_12` on coil `B` will be proportional to value of the `i_2` in moment `t_1` and to the value of `i_1`.
 </p>
 <p>
-However, force `F_21` on coil `A` will be proportional to the value of `i_1` in moment `t_1` and the value of `i_2` in moment `t_0`. Reason for this is that, in moment `t_1`, current `i_1` interacts with the magnetic field produced by `i_2` in `t_0`. Difference `Delta t = t_1 - t_0` is equal to the time that is needed for change in magnetic field to propagate from coil `B` to coil `A` and is equal to `(Delta x) / c`, where `c` is the speed of light in vacuum.
+However, force `F_21` on coil `A` will be proportional to the value of `i_1` in moment `t_1` and the value of `i_2` in moment `t_0`. Reason for this is that, in moment `t_1`, current `i_1` interacts with the magnetic field produced by `i_2` in `t_0`. Difference `Delta t = t_1 - t_0` is equal to the time that is needed for change in magnetic field to propagate from coil `B` to coil `A` and is equal to `x_0 / c`, where `c` is the speed of light in vacuum.
 </p>
 <p>
 This means that forces `F_12` and `F_21` in moment `t_1` are equal to:
@@ -246,36 +250,49 @@ This means that forces `F_12` and `F_21` in moment `t_1` are equal to:
 <br/>
 `F_21(t_1) = K * i_1(t_1) * i_2(t_0)`
 <br/>
-`F_r(t_1) = F_12(t_1) + F_21(t_1) = K * i_2(t_1) * i_1(t_1) - K * i_1(t_1) * i_2(t_0) = K * i_1(t_1) * ( i_2(t_1) - i_2(t_0) ) != 0`
+<br/>
+`F_r(t_1) = F_12(t_1) + F_21(t_1)`
+<br/>&nbsp;&nbsp;&nbsp;`= K * i_2(t_1) * i_1(t_1) - K * i_1(t_1) * i_2(t_0)`
+<br/>&nbsp;&nbsp;&nbsp;`= K * i_1(t_1) * ( i_2(t_1) - i_2(t_0) ) != 0`
 </div>
 
 <p>
 Here it turns out that the resultant force is not equal to zero, since current `i_2` changes and `i_2(t_1) != i_2(t_0)`.
 </p>
 <p>
-If current `i_2` rises net force will be positive, which in this setup means it will be directed along `x` axis, left-to-right.
+If current `i_2` rises, net force will be negative, which in this setup means it will be directed along `x` axis, right-to-left.
+</p>
+<p>
+<div class="well">
+<small>
+<em>NOTE:</em><br/>
+Even though `i_2(t_1) > i_2(t_0)`, the force will be negative because coefficient `K` is actually negative. We choose to do so just to avoid dragging the minus sign through all the equations.
+</small>
+</div>
 </p>
 
 <h3 class="bg-heading3">Constant net force for the simple case of non-constant currents</h3>
 <p>
-Goal here is to have EMC produce a net force, if not constant, then at least directed in the same direction during operation.
+Goal here is to have EMC produce a net force, if not constant, then at least directed in the same direction at all times during operation.
 </p>
 <p>
 It turns out this is fairly simple to achieve by using the following wave forms for currents `i_1` and `i_2`:
 </p>
 
-[Fig 05]
+<img class="img-responsive center-block" src="figures/fig05.png" alt="Figure 05."> 
+<p class="text-center">Figure 05.</p>
+
 <p>
 The wave forms are divided into 8 segments in such a way that for each segment only one of the currents is linearly changing while the other one is constant. Crossing zero point and changing sign means that an electric current is changing direction in the conductive wire coil.
 </p>
 <p>
-By using same reasoning from previous section and taking into account when electric currents are positive and when they're negative, it is easy to conclude that the net force `F_r` is always positive and constant in value, which means it is always directed from left to right on our diagram in Figure 03.
+By using the same reasoning from previous section (which corresponds to the case in segment 1) and taking into account when electric currents are positive and when they're negative, it is easy to conclude that the net force `F_r` is always negative and constant in value, which means it is always directed from right to left on our diagram in Figure 03.
 </p>
 <p>
 Detailed analysis will not be given here since it is simple repetiton of reasoning from previous section, making sure to take into account when electric currents are positive/negative and a fact that in some segments `i_1` is constant (positive or negative) and `i_2` is changing (rising or falling, which makes `i_2(t_1) - i_2(t_0)` positive or negative) and in others it is the other way around.
 </p>
 <p>
-Forces `F_12` and `F_21` are changing directions as currents change from positive to negative and back, but the net result stays positive and constant.
+Forces `F_12` and `F_21` are changing directions as currents change from positive to negative and back, but the net result stays negative and constant.
 </p>
 
 
@@ -299,14 +316,15 @@ It is fairly obvious that Figure 05 resembles two sine waves shifted by 90 degre
 In order to come up with quantitative estimate of the net force, we will again work with two wire coils, `A` and `B`, placed co-axially along `x`-axis. We will also place coil `A` to be at the `x`-axis zero point and coil `B` at the distance `x_0`. Each coil will have only one turn of conductive wire. Coil `A` will carry electrical current `i_1` and coil `B` current `i_2`.
 </p>
 
-[Fig. 06]
+<img class="img-responsive center-block" src="figures/fig06.png" alt="Figure 06."> 
+<p class="text-center">Figure 06.</p>
 
 
 <h3 class="bg-heading3">Calculus</h3>
 
 <h4 class="bg-heading4">Calculus setup</h4>
 <p>
-We will use formula of calculatin magnetic force on a wire coil via magnetic flux:
+We will use the formula of calculating a magnetic force on a wire coil via magnetic flux:
 </p>
 <div class="well well-sm">
 `F = i * d/dx Phi`
@@ -431,16 +449,18 @@ Taking all this into account, magnetic flux for coils becomes:
 <h4 class="bg-heading4">Putting it all together</h4>
 
 <p>
-Since we will need derivative of `M(x)` in order to get final formula for net force, let's take a look at how `M(x)` function looks like in general case:
+Since we will need derivative of `M(x)` in order to get the final formula for net force, let's take a look at how `M(x)` function looks like in general case:
 </p>
 
-[Fig. 07]
+<img class="img-responsive center-block" src="figures/fig07.png" alt="Figure 07."> 
+<p class="text-center">Figure 07.</p>
 
 <p>
 First derivative `d/dx M(x)` would then look like this:
 </p>
 
-[Fig. 08]
+<img class="img-responsive center-block" src="figures/fig08.png" alt="Figure 08."> 
+<p class="text-center">Figure 08.</p>
 
 <p>
 It is important to note here that:
@@ -543,13 +563,13 @@ in which case we can assume:
 `cos ( k * x_0 ) ~~ 1`
 </div>
 <p>
-and since
+and since it is:
 </p>
 <div class="well well-sm">
 `k = 2 * pi / lambda`
 </div>
 <p>
-for the case when distance between the two coils is much smaller than the wavelength, we have:
+then, for the case when distance between the two coils is much smaller than the wavelength, we will have:
 </p>
 
 <div class="well well-sm">
@@ -587,34 +607,53 @@ To estimate the net force, we will assume:
 We can say that, in general, the net force is about million times smaller than the product of maximum current values in both coils.
 </p>
 <p>
-Using finite element analysis we can calculate net force on arbitraty coil geometries and, in general case, above estimate turns out to be correct.
+Using finite element analysis we can calculate net force on arbitraty coil geometries and, in general case, above estimate turns out to be satisfactory.
 </p>
 
 <h2 class="bg-heading2">Conclusion(s)</h2>
 <p>
-Since the net force produced by EMC is practically negligible, pondering further on EMC characteristics would be a not practical thing to do. However, since it provides loads of fun for the nerds and other similar Earthly creatures, we'll do it anyways.
+Since the net force produced by EMC is practically negligible, pondering further on EMC characteristics would be practically un-practical. However, since it provides loads of fun for the nerds and other similar Earthly creatures, I did it anyways.
 </p>
 <p>
-Going into further analysis of EMC work it turns out that:
+It turns out, among other things, that:
 </p>
 <ul>
 <li>
 Enormous electrical power is required to produce thrust of any practical value
 </li>
 <li>
-Frequencies of electrical currents in both coils have to be exactly the same, otherwise net force would oscillate and change direction with frequency equal to difference between `i_1` and `i_2` current frequencies. This means both coils have to be powered from the same generator
+Frequencies of electrical currents in both coils have to be exactly the same, otherwise net force would oscillate and change direction with frequency equal to the difference between `i_1` and `i_2` current frequencies. This means both coils have to be powered from the same generator
 </li>
 <li>
-Maximum thrust is achieved when `i_1` and `i_2` have 90 degree phase shift. To reverse thrust, all we have to do is change the phase shift for 180 degrees
+Maximum thrust is achieved when `i_1` and `i_2` have 90 degree phase shift. To reverse thrust, all we have to do is change the phase shift for 180 degrees (to -90 or +270 electrical degrees)
 </li>
 <li>
 Coils don't have to be miniature or very small compared to the wavelength. Calculating net force in that case requires FEA numerical calculations
 </li>
 <li>
-In order to produce sinusoidal electric current in the coils, one can use square wave voltage which means coils can be powered through some variant of switched mode power supply
+In order to produce sinusoidal electric current in the coils, one can use square wave drive voltage, which means coils can be powered through some variant of switched mode power supply
 </li>
 </ul>
 
+<p>
+There were quite a bit more points and notes and thingies, but I'm just too lazy to retype them all here...
+</p>
+
+        </div> <!-- panel-body -->
+    </div> <!-- panel -->
+    </div>
+    <div class="col-xs-1">&nbsp;</div>
+
+    </div> <!-- row -->
+
+
+    <div class="row">
+
+    <div class="col-xs-1">&nbsp;</div>
+    <div class="col-xs-10">
+    <div class="panel panel-default">
+        <div class="panel-body">
+        And now, you can leave your comments and thoughts and other brainly produces in the <a href="comments.html">comments</a>.
         </div> <!-- panel-body -->
     </div> <!-- panel -->
     </div>
