@@ -1,0 +1,45 @@
+    <div class="row">
+
+    <div class="col-xs-1">&nbsp;</div>
+    <div class="col-xs-10">
+    <div class="panel panel-default">
+        <div class="panel-body">
+
+        <ul class="list-inline">
+            <li>
+                
+        <!-- Facebook: https://developers.facebook.com/docs/plugins/share-button -->
+            <div class="fb-share-button" data-href="https://emengine.space/how-it-works.html" data-layout="button" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Femengine.space%2Fhow-it-works.html&amp;src=sdkpreparse">Share</a></div>
+            <!-- Load Facebook SDK for JavaScript -->
+            <div class="hidden" id="fb-root"></div>
+            <script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+
+            </li>
+            <li>
+                
+        <!-- Twitter: https://publish.twitter.com -->
+        <style type="text/css">
+            /*
+                Fix for Facebook/Twitter button misalignment: http://stackoverflow.com/a/4786882/2268559
+                Still few pixels off...
+             */
+            .twitter-share-button[style] { vertical-align: text-bottom !important; }
+        </style>
+            <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://emengine.space/how-it-works.html" data-show-count="false">Tweet</a>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+            </li>
+        </ul>
+
+        </div> <!-- panel-body -->
+    </div> <!-- panel -->
+    </div>
+    <div class="col-xs-1">&nbsp;</div>
+
+    </div> <!-- row -->
