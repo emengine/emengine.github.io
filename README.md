@@ -10,3 +10,4 @@ Uses:
 * MathJax for math equations
 * Google Analytics for tracking
 * Hotjar for heatmaps
+* Social buttons: Facebook, Twitter
